@@ -1,0 +1,17 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+.body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  background-color: var(--light);
+  color: var(--black);
+
+  @include tablet {
+    font-size: 15px;
+  }
+}

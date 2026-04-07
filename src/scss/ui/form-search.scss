@@ -1,0 +1,36 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.form-search {
+  display: flex;
+  background-color: var(--gray);
+  border-radius: 50px;
+  overflow: hidden;
+  width: fit-content;
+
+  &._open {
+    .form-search-input {
+      width: 300px;
+      padding-left: 15px;
+    }
+  }
+}
+.form-search-toggle {
+  @include flex-center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  width: 40px;
+  height: 40px;
+
+  transition: color 0.3s ease;
+  @include hover {
+    color: var(--primary);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
