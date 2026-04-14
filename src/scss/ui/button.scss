@@ -5,8 +5,8 @@
   --background: var(--primary);
   --border: var(--primary);
   --color: white;
-  --background-h: var(--black);
-  --border-h: var(--black);
+  --background-h: var(--primary-hover);
+  --border-h: var(--primary-hover);
   --color-h: white;
 
   @include flex-center;
@@ -18,6 +18,7 @@
   padding: 19px 39px;
   background-color: var(--background);
   border: 1px solid var(--border);
+  gap: 15px;
 
   text-align: center;
   font-weight: 600;
@@ -26,14 +27,97 @@
   color: var(--color);
   user-select: none;
 
-  transition: color .3s ease, border-color .3s ease, background-color .3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
   @include hover {
     color: var(--color-h);
     background-color: var(--background-h);
     border-color: var(--border-h);
+
+    .arrow {
+      transform: rotate(45deg);
+    }
   }
 
   @include tablet {
     padding: 12px 30px;
+  }
+
+  .arrow {
+    width: 12px;
+    height: 12px;
+
+    transition: transform 0.3s ease;
+  }
+}
+
+.btn-play {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: fit-content;
+
+  @include hover {
+    .circle {
+      &::before {
+        inset: 0
+      }
+    }
+  }
+
+  .circle {
+    @include flex-center;
+    position: relative;
+    width: 130px;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    background: rgba(94, 100, 112, 0.2);
+    color: white;
+
+    @include laptop-middle {
+      width: 90px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 15px;
+      border-radius: 100px;
+      background: rgba(46, 214, 161, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      z-index: -1;
+
+      transition: inset .3s ease;
+
+      @include laptop-middle {
+        inset: 10px;
+      }
+    }
+
+    svg {
+      width: 35px;
+      height: 35px;
+
+      @include laptop-min {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  .text {
+    padding: 10px 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(94, 100, 112, 0.2);
+    border-radius: 100px;
+
+    @include laptop-middle {
+      padding: 8px;
+      font-size: 15px;
+    }
   }
 }

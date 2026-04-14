@@ -1,0 +1,149 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 155px;
+  color: white;
+  min-height: 800px;
+  border-radius: 0px 0px 50px 50px;
+  overflow: hidden;
+  z-index: 1;
+  @include laptop {
+    padding-top: 150px;
+  }
+  @include laptop-middle {
+    padding-top: 140px;
+    min-height: 600px;
+    border-radius: 0px 0px 30px 30px;
+  }
+  @include laptop-min {
+    padding-top: 70px;
+    border-radius: 0px 0px 25px 25px;
+    padding-bottom: 30px;
+  }
+  @include tablet {
+    border-radius: 0px 0px 20px 20px;
+  }
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 245px;
+    z-index: -1;
+    @include laptop {
+      right: 50%;
+      transform: translate(50%, -50%)
+    }
+  }
+  &__wrapper {
+    @include flex-between;
+    padding: 50px 0px;
+    gap: 25px;
+    @include laptop-min {
+      padding: 30px 0px 0px 0px;
+    }
+
+    .slider-arrow {
+      @include laptop-min {
+        display: none !important;
+      }
+    }
+  }
+  &__slider {
+    flex: 0 1 1500px;
+  }
+  &__slide {
+    display: flex !important;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+
+    opacity: 0 !important;
+
+    &.swiper-slide-active {
+      opacity: 1 !important;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  &__info {
+    max-width: 700px;
+    @include laptop {
+      max-width: 550px;
+    }
+    @include laptop-middle {
+      max-width: 490px;
+    }
+    @include laptop-min {
+      max-width: 385px;
+    }
+    @include tablet {
+      max-width: none;
+      width: 100%;
+    }
+
+    .btn-play {
+      margin-top: 20px;
+      @media (min-width: 992px) {
+        display: none;
+      }
+      @include tablet-min {
+        margin: 20px auto 0 auto;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    margin: 0;
+    font-size: 18px;
+    line-height: 150%;
+    @include laptop-min {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    margin-top: 30px;
+    width: 200px;
+    max-width: 100%;
+    @include laptop-min {
+      margin-top: 20px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__show {
+    position: relative;
+    flex: 1;
+  }
+  &__gallery {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 1;
+    .btn-play {
+      position: absolute;
+      z-index: 1;
+      left: -50px;
+      bottom: 85px;
+
+      @include laptop {
+        left: 0;
+      }
+      @include laptop-min {
+        display: none;
+      }
+    }
+  }
+  &__img {
+    display: block;
+  }
+}

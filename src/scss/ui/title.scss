@@ -1,1 +1,54 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
 
+.m-title {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 100%;
+  margin: 0;
+
+  span {
+    color: var(--primary);
+  }
+
+  @include laptop {
+    font-size: 64px;
+  }
+  @include laptop-middle {
+    font-size: 54px;
+  }
+  @include laptop-min {
+    font-size: 44px;
+  }
+}
+.s-title {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  margin: 0;
+  line-height: 100%;
+
+  @include laptop {
+    font-size: 44px;
+  }
+  @include laptop-middle {
+    font-size: 38px;
+  }
+  @include laptop-min {
+    font-size: 32px;
+  }
+}
+.t-title {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 0;
+  line-height: 100%;
+  @include laptop-middle {
+    font-size: 30px;
+  }
+  @include laptop-min {
+    font-size: 28px;
+  }
+}

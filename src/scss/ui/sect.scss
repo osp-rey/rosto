@@ -1,0 +1,21 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.sect-p {
+  padding: 90px 0px;
+  @include laptop-middle {
+    padding: 80px 0px;
+  }
+  @include laptop-min {
+    padding: 60px 0px;
+  }
+}
+.sect-m {
+  margin: 90px 0px;
+  @include laptop-middle {
+    margin: 80px 0px;
+  }
+  @include laptop-min {
+    margin: 60px 0px;
+  }
+}

@@ -1,0 +1,59 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-decisions {
+  position: relative;
+  z-index: 1;
+  margin-top: 0 !important;
+  padding-top: 90px;
+  @include laptop-middle {
+    padding-top: 80px;
+  }
+  @include laptop-min {
+    padding-top: 60px;
+  }
+  &__circles-decor {
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: -1;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include laptop-middle {
+      flex-wrap: wrap;
+    }
+  }
+  &__main {
+    position: sticky;
+    top: 170px;
+    flex: 0 1 600px;
+    @include laptop-middle {
+      position: static;
+      flex-wrap: wrap;
+      flex: auto;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__tabs {
+    flex: 0 1 900px;
+    @include laptop-middle {
+      flex: auto;
+    }
+  }
+  &__tableware-decor {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    bottom: 35px;
+    left: -40px;
+  }
+}

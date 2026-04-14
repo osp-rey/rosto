@@ -1,3 +1,4 @@
+@use "./base/fonts";
 @use "./base/normalize";
 @use "./base/vars";
 @use "./base/templates";
@@ -11,10 +12,18 @@
 @use "./ui/list";
 @use "./ui/form-search";
 @use "./ui/social";
+@use "./ui/title";
+@use "./ui/sect";
+@use "./ui/slider";
+@use "./ui/content";
+@use "./ui/tab";
 
 // components
 @use "./components/header";
-
 @use "./components/burger";
+@use "./components/b-info";
+
+@use "./components/s-hero";
+@use "./components/s-decisions";
 
 @use "./components/footer";

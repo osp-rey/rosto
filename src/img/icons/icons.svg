@@ -1,7 +1,21 @@
-<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 256 256" id="icon-close" xmlns="http://www.w3.org/2000/svg"><rect width="256" height="256" fill="none"/><line x1="200" y1="56" x2="56" y2="200" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="200" y1="200" x2="56" y2="56" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></symbol><symbol viewBox="0 0 12 7" fill="none" id="icon-down" xmlns="http://www.w3.org/2000/svg">
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 17 14" fill="none" id="icon-arrow-next" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 7.00002L15 7M15 7L9.50427 1M15 7L9.50427 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 17 14" fill="none" id="icon-arrow-prev" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3561 7.00002L1.35609 7M1.35609 7L6.85181 1M1.35609 7L6.85181 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 14 14" fill="none" id="icon-arrow-rotate" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 13L13 1M13 1H1M13 1V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 256 256" id="icon-close" xmlns="http://www.w3.org/2000/svg"><rect width="256" height="256" fill="none"/><line x1="200" y1="56" x2="56" y2="200" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="200" y1="200" x2="56" y2="56" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></symbol><symbol viewBox="0 0 12 7" fill="none" id="icon-down" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.5 0.500001L6 5.5L0.5 0.5" stroke="currentColor" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 26 26" fill="none" id="icon-mark-circle" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 13C25 19.6274 19.6274 25 13 25C6.37258 25 1 19.6274 1 13C1 6.37258 6.37258 1 13 1C14.8827 1 16.6642 1.43358 18.25 2.20635M22.75 5.5L12.25 16L9.25 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol viewBox="0 0 18 18" fill="none" id="icon-max" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.19338 17.9486C7.42691 17.9486 6.606 17.6896 5.17907 16.6536C4.27649 17.8191 1.41833 18.7299 1.29369 17.1716C1.29369 16.0018 1.03581 15.0133 0.74355 13.9342C0.395414 12.6046 0 11.124 0 8.97863C0 3.85477 4.18623 0 9.14611 0C14.1103 0 17.9999 4.0447 17.9999 9.02612C18.0166 13.9305 14.0765 17.9225 9.19338 17.9486ZM9.26645 4.42888C6.85098 4.3037 4.96847 5.98288 4.55156 8.61604C4.20772 10.7959 4.81804 13.4507 5.33809 13.5888C5.58738 13.6493 6.21488 13.1399 6.606 12.7471C7.25273 13.1958 8.00584 13.4653 8.78937 13.5284C11.2922 13.6493 13.4308 11.7356 13.5988 9.22468C13.6966 6.70844 11.7696 4.5772 9.26645 4.4332L9.26645 4.42888Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 17 14" fill="none" id="icon-next" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 7.00002L15 7M15 7L9.50427 1M15 7L9.50427 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 35 35" fill="none" id="icon-play" xmlns="http://www.w3.org/2000/svg">
+<path d="M29 14.0359C31.6667 15.5755 31.6667 19.4245 29 20.9641L14.75 29.1913C12.0833 30.7309 8.75 28.8064 8.75 25.7272L8.75 9.27275C8.75 6.19355 12.0833 4.26906 14.75 5.80866L29 14.0359Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 17 14" fill="none" id="icon-prev" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.3561 7.00002L1.35609 7M1.35609 7L6.85181 1M1.35609 7L6.85181 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </symbol><symbol viewBox="0 0 18 18" fill="none" id="icon-search" xmlns="http://www.w3.org/2000/svg">
 <path d="M13 13L17 17M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol viewBox="0 0 20 16" fill="none" id="icon-tg" xmlns="http://www.w3.org/2000/svg">
