@@ -17,6 +17,9 @@
 @use "./ui/slider";
 @use "./ui/content";
 @use "./ui/tab";
+@use "./ui/modal";
+@use "./ui/form";
+@use "./ui/card-follow";
 
 // components
 @use "./components/header";
@@ -25,5 +28,7 @@
 
 @use "./components/s-hero";
 @use "./components/s-decisions";
+@use "./components/s-tasks";
+@use "./components/s-follow";
 
 @use "./components/footer";

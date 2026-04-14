@@ -42,7 +42,12 @@
   }
 
   @include tablet {
-    padding: 12px 30px;
+    padding: 15px 25px;
+  }
+
+  &._black {
+    --background: var(--black);
+    --border: var(--black);
   }
 
   .arrow {
@@ -63,7 +68,7 @@
   @include hover {
     .circle {
       &::before {
-        inset: 0
+        inset: 0;
       }
     }
   }
@@ -92,7 +97,7 @@
       border: 1px solid rgba(255, 255, 255, 0.5);
       z-index: -1;
 
-      transition: inset .3s ease;
+      transition: inset 0.3s ease;
 
       @include laptop-middle {
         inset: 10px;

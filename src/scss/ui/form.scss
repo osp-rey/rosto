@@ -1,0 +1,69 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.input-control {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 19px 30px;
+  outline: none;
+  border: 1px solid var(--primary);
+  background: transparent;
+  border-radius: 50px;
+
+  color: inherit;
+
+  @include tablet {
+    padding: 15px 20px;
+  }
+}
+
+.check-wrapper {
+  position: relative;
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked + .wpcf7-list-item-label {
+      &::before {
+        background: url("@img/check-primary.svg") center / 13px auto no-repeat;
+      }
+    }
+  }
+  .wpcf7-list-item-label {
+    display: flex;
+    align-items: start;
+    cursor: pointer;
+    gap: 15px;
+
+    font-size: 14px;
+
+    span {
+      display: block;
+    }
+    a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      margin-top: -1px;
+      border: 1px solid var(--primary);
+    }
+  }
+}

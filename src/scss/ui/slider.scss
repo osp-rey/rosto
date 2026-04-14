@@ -1,6 +1,15 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 
+.slider-arrows {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+
+  @include tablet {
+    display: none;
+  }
+}
 .slider-arrow {
   --background: white;
   --background-h: var(--primary);
@@ -25,6 +34,10 @@
     background-color 0.3s ease,
     opacity 0.3s ease;
 
+  @include laptop-min {
+    width: 45px;
+    height: 45px;
+  }
   @include hover {
     color: var(--color-h);
     border-color: var(--border-h);
@@ -34,6 +47,11 @@
   svg {
     width: 16px;
     height: 16px;
+
+    @include laptop-min {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   &.swiper-button-lock,
@@ -52,14 +70,14 @@
 }
 
 .slider-pagination {
+  --color: var(--primary);
+  --color-a: var(--primary-hover);
   @include flex-center;
   gap: 7px;
   margin-top: 30px;
   @include tablet {
     margin-top: 20px;
   }
-  --color: var(--primary);
-  --color-a: var(--primary-hover);
 
   &._white {
     --color: white;

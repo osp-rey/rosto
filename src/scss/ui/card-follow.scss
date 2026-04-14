@@ -1,0 +1,38 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.card-follow {
+  display: flex;
+  align-items: center;
+  min-height: 150px;
+  border: 1px solid rgba(46, 214, 161, 0.2);
+  border-radius: 20px;
+  padding: 30px 40px;
+  gap: 20px;
+  background: url('@img/follow-bg.png') center / 470px auto no-repeat;
+
+  font-family: "BebasNeue", sans-serif;
+  font-size: 32px;
+
+  transition: border-color .3s ease;
+
+  @include laptop-min {
+    padding: 25px;
+    min-height: 120px;
+    font-size: 26px;
+    background-size: 300px auto;
+    border-radius: 15px;
+  }
+  @include tablet-min {
+    background-size: 470px auto;
+  }
+  @include hover {
+    border-color: var(--primary);
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    color: var(--primary);
+  }
+}
