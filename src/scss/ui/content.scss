@@ -1,3 +1,6 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
 .content-box {
   line-height: 150%;
 
@@ -5,6 +8,14 @@
     margin: 0;
     &:not(:last-child) {
       margin-bottom: 18px;
+    }
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 20px;
+    @include tablet {
+      font-size: 18px;
     }
   }
 }

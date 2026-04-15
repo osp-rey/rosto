@@ -1,5 +1,5 @@
-@use '../base/templates' as *;
-@use '../base/media' as *;
+@use "../base/templates" as *;
+@use "../base/media" as *;
 
 .social {
   display: flex;
@@ -19,17 +19,30 @@
   height: 40px;
 
   background-color: var(--background);
-  border: var(--border);
-  color: var(--coor);
+  border: 1px solid var(--border);
+  color: var(--color);
 
-  transition: border-color .3s ease, background-color .3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
   @include hover {
     background-color: var(--background-h);
     border-color: var(--border-h);
+    color: var(--color-h);
   }
 
   svg {
     width: 20px;
     height: 20px;
+  }
+
+  &._outline-primary {
+    --border: var(--primary);
+    --background: transparent;
+    --color: var(--primary);
+    --border-h: var(--primary);
+    --background-h: var(--primary);
+    --color-h: white;
   }
 }

@@ -52,3 +52,12 @@
     font-size: 28px;
   }
 }
+
+.f-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  @include tablet {
+    font-size: 18px;
+  }
+}

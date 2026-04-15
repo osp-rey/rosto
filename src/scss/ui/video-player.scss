@@ -1,0 +1,61 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.video-player {
+  @include flex-center;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/0.6;
+  border-radius: 16px;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  @include tablet {
+    aspect-ratio: 1/0.7;
+  }
+
+  &._active {
+    .video {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .btn-p {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .video {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 1px);
+    top: 0;
+    left: 0;
+    object-fit: cover;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .btn-p {
+    @media (min-width: 768px) {
+      width: 100px;
+
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}

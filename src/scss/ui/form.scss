@@ -14,15 +14,38 @@
   background: transparent;
   border-radius: 50px;
 
-  color: inherit;
+  color: var(--black);
 
   @include tablet {
     padding: 15px 20px;
+  }
+
+  &._transparent-white {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
   }
 }
 
 .check-wrapper {
   position: relative;
+
+  &._white {
+    .wpcf7-list-item-label {
+      &::before {
+        background-color: white;
+        border-color: white;
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked + .wpcf7-list-item-label {
+        &::before {
+          background: url("@img/check-primary.svg") center / 13px auto no-repeat;
+          background-color: white;
+        }
+      }
+    }
+  }
 
   input[type="checkbox"] {
     position: absolute;

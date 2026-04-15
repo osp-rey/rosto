@@ -46,4 +46,112 @@ export default function sliders() {
       },
     });
   }
+
+  const sectNavSliders = document.querySelectorAll(".sect-nav");
+
+  if (sectNavSliders.length) {
+    sectNavSliders.forEach((nav) => {
+      const swiper = new Swiper(nav, {
+        speed: 900,
+        slidesPerView: "auto",
+        spaceBetween: 25,
+        breakpoints: {
+          992: {
+            slidesPerView: "auto",
+            spaceBetween: 50,
+          },
+          768: {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+          },
+        },
+      });
+    });
+  }
+
+  const casesSliders = document.querySelectorAll(".s-cases__slider");
+
+  if (casesSliders.length) {
+    const arrows = Array.from(
+      document.querySelectorAll(".s-cases .slider-arrows"),
+    );
+
+    casesSliders.forEach((slider, index) => {
+      const swiper = new Swiper(slider, {
+        speed: 900,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        autoplay: {
+          delay: 5500,
+        },
+        navigation: {
+          prevEl: arrows[index].querySelector(".slider-arrow._prev"),
+          nextEl: arrows[index].querySelector(".slider-arrow._next"),
+        },
+        pagination: {
+          el: slider.nextElementSibling,
+          clickable: true,
+        },
+        breakpoints: {
+          1366: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  }
+
+  const partnersSlider = document.querySelector(".slider-partners");
+
+  if (partnersSlider) {
+    const swiper = new Swiper(partnersSlider, {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      speed: 12000,
+      watchOverflow: true,
+      loop: true,
+      allowTouchMove: false,
+      watchSlidesProgress: true,
+      centeredSlides: true,
+      a11y: false,
+      autoplay: {
+        delay: 0,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: "auto",
+          spaceBetween: 65,
+        },
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
+
+  const blogSlider = document.querySelector(".s-blog__slider");
+
+  if (blogSlider) {
+    const swiper = new Swiper(blogSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        prevEl: ".s-blog .slider-arrow._prev",
+        nextEl: ".s-blog .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-blog .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        
+      },
+    });
+  }
 }

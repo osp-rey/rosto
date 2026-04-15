@@ -20,6 +20,9 @@
 @use "./ui/modal";
 @use "./ui/form";
 @use "./ui/card-follow";
+@use "./ui/card-case";
+@use "./ui/card-article";
+@use "./ui/video-player";
 
 // components
 @use "./components/header";
@@ -30,5 +33,12 @@
 @use "./components/s-decisions";
 @use "./components/s-tasks";
 @use "./components/s-follow";
+@use "./components/s-cases";
+@use "./components/s-connect";
+@use "./components/s-about";
+@use "./components/s-location";
+@use "./components/slider-partners";
+@use "./components/s-blog";
+@use "./components/s-contacts";
 
 @use "./components/footer";

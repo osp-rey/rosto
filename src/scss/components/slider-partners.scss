@@ -1,0 +1,29 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.slider-partners {
+  overflow: visible !important;
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  .swiper-slide {
+    @include flex-center;
+    height: auto !important;
+    width: 165px !important;
+    max-width: 100%;
+
+    @include hover {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+
+    img {
+      display: block;
+      filter: grayscale(100%);
+
+      transition: filter .3s ease;
+    }
+  }
+}

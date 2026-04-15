@@ -1,0 +1,95 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.card-article-big {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1/0.57;
+  color: white;
+  z-index: 1;
+
+  @include tablet-min {
+    border-radius: 12px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+
+  &__body {
+    padding: 40px;
+    @include laptop {
+      padding: 30px;
+    }
+    @include tablet-min {
+      padding: 25px;
+    }
+  }
+  &__title {
+    font-family: "BebasNeue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 110%;
+    margin: 0;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include laptop {
+      font-size: 36px;
+    }
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+  &__date {
+  }
+}
+
+.card-article {
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/0.8;
+    border-radius: 16px;
+
+    @include tablet-min {
+      border-radius: 12px;
+    }
+  }
+  &__body {
+    margin-top: 10px;
+  }
+  &__date {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  &__title {
+    font-family: "BebasNeue", sans-serif;
+    font-size: 28px;
+    line-height: 110%;
+    margin: 10px 0px 0px 0px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+
+    @include laptop {
+      font-size: 24px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}

@@ -49,6 +49,14 @@
     --background: var(--black);
     --border: var(--black);
   }
+  &._outline-black {
+    --background: transparent;
+    --border: var(--black);
+    --color: var(--black);
+    --background-h: var(--black);
+    --border-h: var(--black);
+    --color-h: white;
+  }
 
   .arrow {
     width: 12px;
@@ -124,5 +132,47 @@
       padding: 8px;
       font-size: 15px;
     }
+  }
+}
+
+.btn-p {
+  --border: rgba(255, 255, 255, 0.5);
+  --border-h: rgba(255, 255, 255, 0.5);
+  --background: rgba(46, 214, 161, 0.5);
+  --background-h: rgba(46, 214, 161, 1);
+  --color: white;
+  --color-h: white;
+
+  @include flex-center;
+  cursor: pointer;
+  width: 60px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  @include hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  &._primary {
+    --border: var(--primary);
+    --border-h: var(--primary-hover);
+    --background: var(--primary);
+    --background-h: var(--primary-hover);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
   }
 }

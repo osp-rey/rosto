@@ -12,8 +12,11 @@ export default function tab() {
         const allTabs = Array.from(
           container.querySelector(".tabs-content").children,
         ).filter((child) => child.hasAttribute("data-tab"));
+        const addedTabs = Array.from(
+          container.querySelector(".tabs-content-added").children,
+        ).filter((child) => child.hasAttribute("data-tab"));
 
-        const currentTab = container.querySelector(`[data-tab="${tabId}"]`);
+        const currentTab = container.querySelector(`.tabs-content [data-tab="${tabId}"]`);
 
         allTabs.forEach((t) => {
           t.classList.remove("_show");
@@ -27,6 +30,20 @@ export default function tab() {
 
         allButtons.forEach((b) => b.classList.remove("_active"));
         btn.classList.add("_active");
+
+        if (addedTabs.length) {
+          const currentTabAdded = container.querySelector(
+            `.tabs-content-added [data-tab="${tabId}"]`,
+          );
+          addedTabs.forEach((t) => {
+            t.classList.remove("_show");
+            t.classList.remove("_active");
+          });
+          currentTabAdded.classList.add("_active");
+          setTimeout(() => {
+            currentTabAdded.classList.add("_show");
+          }, 150);
+        }
       });
     });
   }

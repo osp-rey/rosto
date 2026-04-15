@@ -1,3 +1,30 @@
+export function countLines(element) {
+  // Создаем временный элемент-копию
+  const clone = element.cloneNode(true);
+  clone.style.position = "absolute";
+  clone.style.visibility = "hidden";
+  clone.style.top = "-9999px";
+  clone.style.left = "-9999px";
+  clone.style.width = window.getComputedStyle(element.parentElement).width;
+  clone.style.display = "block"; // Важно: block, а не inline-block
+  
+  document.body.appendChild(clone);
+  
+  // Считаем строки через высоту и line-height
+  const styles = window.getComputedStyle(clone);
+  const lineHeight = parseFloat(styles.lineHeight);
+  const height = clone.clientHeight;
+  
+  document.body.removeChild(clone);
+  
+  if (lineHeight && lineHeight > 0) {
+    return Math.round(height / lineHeight);
+  }
+  
+  // Fallback: считаем переносы строк в тексте
+  return element.innerText.split("\n").length;
+}
+
 export function createScript(url, type) {
   if (!url) return;
 

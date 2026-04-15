@@ -1,0 +1,58 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-location {
+  overflow: hidden;
+  box-shadow: inset 0 0 60px 0 rgba(194, 207, 233, 0.5);
+  background-color: var(--gray-p);
+  &__wrapper {
+    @include flex-between;
+    gap: 40px;
+    row-gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__info {
+    position: relative;
+    flex: 0 1 700px;
+    z-index: 1;
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+  }
+  &__btn {
+    margin-top: 30px;
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__gallery {
+    @include flex-center;
+    position: relative;
+    width: 930px;
+    @include laptop-min {
+      margin: 0 auto;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  &__globe {
+    position: absolute;
+    width: 1115px;
+    @media (min-width: 1366px) {
+      max-width: none;
+    }
+  }
+  .slider-partners {
+    margin-top: 50px;
+  }
+}

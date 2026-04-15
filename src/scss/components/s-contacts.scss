@@ -1,0 +1,108 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-contacts {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @include laptop-middle {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(8, 25, 88, 0.05);
+    @include desktop {
+      padding: 30px;
+    }
+    @include laptop {
+      gap: 20px;
+    }
+    @include tablet {
+      padding: 20px;
+      border-radius: 16px;
+    }
+    @include tablet-min {
+      gap: 25px;
+    }
+
+    &._full {
+      grid-column: 2 span;
+      @include tablet-min {
+        grid-column: 1 span;
+      }
+    }
+    &._row {
+      flex-direction: row;
+      justify-content: space-between;
+      @include tablet-min {
+        flex-direction: column;
+      }
+    }
+  }
+  &__item-row {
+    .title {
+      font-weight: 300;
+      font-size: 13px;
+      color: var(--gray-d);
+      margin-bottom: 10px;
+    }
+    .social-item {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__row-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 20px;
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__map {
+    border-radius: 20px;
+    background-color: var(--gray);
+    overflow: hidden;
+
+    @include laptop-middle {
+      height: 500px;
+    }
+    @include tablet {
+      border-radius: 16px;
+      height: 450px;
+    }
+    @include tablet-min {
+      height: 400px;
+    }
+  }
+}
