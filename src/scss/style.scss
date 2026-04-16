@@ -23,6 +23,7 @@
 @use "./ui/card-case";
 @use "./ui/card-article";
 @use "./ui/card-service";
+@use "./ui/card-tariff";
 @use "./ui/video-player";
 @use "./ui/breadcrumbs";
 
@@ -44,5 +45,7 @@
 @use "./components/s-contacts";
 @use "./components/s-archive-service";
 @use "./components/s-adv";
+@use "./components/s-opportunities";
+@use "./components/s-tariffs";
 
 @use "./components/footer";
