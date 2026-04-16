@@ -4,13 +4,15 @@
 .s-decisions {
   position: relative;
   z-index: 1;
-  margin-top: 0 !important;
-  padding-top: 90px;
-  @include laptop-middle {
-    padding-top: 80px;
-  }
-  @include laptop-min {
-    padding-top: 60px;
+  &:not(._simple) {
+    margin-top: 0 !important;
+    padding-top: 90px;
+    @include laptop-middle {
+      padding-top: 80px;
+    }
+    @include laptop-min {
+      padding-top: 60px;
+    }
   }
   &__circles-decor {
     position: absolute;
@@ -33,20 +35,65 @@
   &__main {
     position: sticky;
     top: 170px;
-    flex: 0 1 600px;
+    flex: 0 1 810px;
     @include laptop-middle {
       position: static;
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
       flex: auto;
+    }
+
+    &._static {
+      position: static;
+    }
+
+    .tabs-nav {
+      max-width: 600px;
+      @include laptop-middle {
+        order: 2;
+      }
     }
   }
   &__title {
     margin-bottom: 30px;
+    @include laptop-middle {
+      order: 0;
+    }
   }
   &__tabs {
     flex: 0 1 900px;
     @include laptop-middle {
       flex: auto;
+    }
+  }
+  &__gallery {
+    position: relative;
+    margin-top: 50px;
+    @include laptop-middle {
+      margin-top: 0;
+      margin-bottom: 30px;
+      order: 1;
+    }
+  }
+  &__gallery-img {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    max-width: none;
+    width: 930px;
+
+    @include desktop {
+      width: 760px;
+    }
+    @include laptop {
+      width: 650px;
+    }
+    @include laptop-middle {
+      position: static;
+      width: 930px;
+      max-width: 100%;
+      margin: 0 auto;
     }
   }
   &__tableware-decor {

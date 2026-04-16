@@ -36,15 +36,6 @@
         border-color: white;
       }
     }
-
-    input[type="checkbox"] {
-      &:checked + .wpcf7-list-item-label {
-        &::before {
-          background: url("@img/check-primary.svg") center / 13px auto no-repeat;
-          background-color: white;
-        }
-      }
-    }
   }
 
   input[type="checkbox"] {
@@ -56,7 +47,9 @@
 
     &:checked + .wpcf7-list-item-label {
       &::before {
-        background: url("@img/check-primary.svg") center / 13px auto no-repeat;
+        background: url("@img/check-white.svg") center / 13px auto no-repeat;
+        background-color: var(--black);
+        border-color: var(--black);
       }
     }
   }
@@ -87,6 +80,10 @@
       border-radius: 4px;
       margin-top: -1px;
       border: 1px solid var(--primary);
+
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
     }
   }
 }

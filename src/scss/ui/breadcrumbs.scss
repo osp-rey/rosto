@@ -1,0 +1,36 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.breadcrumbs {
+  padding: 25px 0px;
+
+  & + .sect-p {
+    padding-top: 0 !important;
+  }
+  & + .sect-m {
+    margin-top: 0 !important;
+  }
+
+  .aioseo-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .aioseo-breadcrumb {
+    a {
+      transition: color .3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  .aioseo-breadcrumb-separator {
+    font-size: 0px;
+    width: 4px;
+    height: 4px;
+    flex-shrink: 0;
+    display: block;
+    background-color: var(--primary);
+  }
+}

@@ -1,0 +1,79 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-adv {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include tablet-min {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    flex: 0 1 520px;
+    text-align: center;
+
+    @include tablet-min {
+      flex: auto;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      .text {
+        &::before {
+          right: -100px;
+        }
+      }
+    }
+
+    .val {
+      font-family: "BebasNeue", sans-serif;
+      font-size: 150px;
+      line-height: 80%;
+      text-align: center;
+      background: linear-gradient(180deg, #2fb9b7 0%, #2ed6a1 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include laptop {
+        font-size: 120px;
+      }
+      @include laptop-min {
+        font-size: 80px;
+      }
+      @include tablet {
+        font-size: 60px;
+      }
+      @include tablet-min {
+        font-size: 100px;
+      }
+    }
+    .text {
+      position: relative;
+      line-height: 150%;
+      padding-top: 20px;
+      margin-top: 20px;
+      width: 100%;
+
+      @include laptop-min {
+        margin-top: 15px;
+        padding-top: 15px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        background-color: #dddee0;
+        left: 0;
+        right: 0;
+        top: 0;
+        @include laptop-min {
+          right: 0 !important;
+        }
+      }
+    }
+  }
+}

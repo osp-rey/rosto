@@ -1,0 +1,62 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.card-service {
+  @include flex-between;
+  padding: 40px 30px;
+  border: 1px solid rgba(46, 214, 161, 0.2);
+  border-radius: 20px;
+  min-height: 200px;
+  gap: 20px;
+  transition: border-color .3s ease;
+
+  background: url('@img/follow-bg.png') bottom -40px left -80px / 470px auto no-repeat;
+
+  @include hover {
+    border-color: var(--primary);
+  }
+  @include laptop {
+    padding: 20px 30px;
+    min-height: 180px;
+    background-size: 300px auto;
+  }
+  @include laptop-middle {
+    padding: 20px;
+  }
+  @include laptop-min {
+    min-height: 130px;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-family: "BebasNeue", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include laptop-middle {
+      font-size: 24px;
+      gap: 15px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+    }
+  }
+  .icon {
+    display: block;
+    width: 130px;
+    @include laptop {
+      width: 100px;
+    }
+    @include laptop-middle {
+      width: 80px;
+    }
+  }
+}

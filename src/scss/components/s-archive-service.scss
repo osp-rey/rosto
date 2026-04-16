@@ -1,0 +1,21 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-archive-service {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .card-service {
+      flex: 1 1 calc(33.333% - 14px);
+      @include laptop-min {
+        flex-basis: calc(50% - 10px);
+      }
+      @include tablet-min {
+        flex: auto;
+        width: 100%;
+      }
+    }
+  }
+}
