@@ -22,10 +22,10 @@
   &__close {
     cursor: pointer;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 15px;
-    right: 15px;
+    width: 22px;
+    height: 22px;
+    top: 20px;
+    right: 20px;
 
     transition: color 0.3s ease;
     @include hover {

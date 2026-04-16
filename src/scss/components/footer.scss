@@ -1,33 +1,221 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
 .footer {
   padding: 70px 0px 40px 0px;
   background-color: var(--black);
   color: white;
-  &__grid {
+  @include tablet {
+    padding: 40px 0px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    @include laptop-middle {
+      flex-direction: column-reverse;
+    }
   }
   &__nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex: 0 1 1200px;
+    gap: 40px;
+    @include laptop-middle {
+      flex: auto;
+      width: 100%;
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      row-gap: 40px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
   }
   &__nav-item {
+    @include tablet-min {
+      text-align: center;
+    }
   }
   &__nav-title {
+    font-family: "BebasNeue", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--gray-d);
+    @include tablet-min {
+      margin-bottom: 20px;
+    }
   }
   &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    a {
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: var(--primary);
+      }
+    }
   }
   &__main {
+    flex: 0 1 380px;
+    @include laptop-middle {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      flex: auto;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
   }
   &__logo {
+    display: block;
+    width: 245px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    @include laptop-middle {
+      margin: 0;
+    }
+    @include laptop-min {
+      width: 200px;
+    }
+    @include tablet-min {
+      margin: 0 auto;
+    }
   }
   &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    text-align: right;
+
+    @include laptop-middle {
+      text-align: start;
+      align-items: start;
+    }
+    @include tablet-min {
+      align-items: center;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include laptop-min {
+        margin-bottom: 0;
+      }
+    }
+
+    .tel,
+    .mail {
+      display: block;
+      margin-left: auto;
+
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+      @include laptop-middle {
+        margin-left: 0;
+      }
+    }
+
     .title {
+      font-weight: 300;
+      font-size: 13px;
+      color: var(--gray-d);
+      margin-bottom: 10px;
     }
     .tel {
+      font-weight: 600;
+      font-size: 22px;
+      @include laptop-min {
+        font-size: 20px;
+      }
     }
     .mail {
+      font-size: 20px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      @include hover {
+        opacity: 1;
+        color: inherit;
+      }
+      @include laptop-min {
+        font-size: 18px;
+      }
     }
     .social-item {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
     .text {
     }
     .text-gray {
+      opacity: 0.7;
+    }
+  }
+  &__bottom {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    margin-top: 50px;
+
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--gray-d);
+
+    @include laptop-middle {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: white;
+      }
+    }
+  }
+  &__copyright {
+  }
+  &__bottom-list {
+    display: flex;
+    gap: 50px;
+    margin: 0 auto;
+
+    @include laptop-middle {
+      gap: 30px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__dev {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    @include laptop-middle {
+      margin: 0 auto;
     }
   }
 }

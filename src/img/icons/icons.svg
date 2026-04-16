@@ -4,7 +4,17 @@
 <path d="M15.3561 7.00002L1.35609 7M1.35609 7L6.85181 1M1.35609 7L6.85181 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </symbol><symbol viewBox="0 0 14 14" fill="none" id="icon-arrow-rotate" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 13L13 1M13 1H1M13 1V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-</symbol><symbol viewBox="0 0 256 256" id="icon-close" xmlns="http://www.w3.org/2000/svg"><rect width="256" height="256" fill="none"/><line x1="200" y1="56" x2="56" y2="200" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="200" y1="200" x2="56" y2="56" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></symbol><symbol viewBox="0 0 12 7" fill="none" id="icon-down" xmlns="http://www.w3.org/2000/svg">
+</symbol><symbol viewBox="0 0 165 165" fill="none" id="icon-close" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#dclip0_2110_1400)">
+<path d="M154 9L10 153" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M154 153L10 9" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="dclip0_2110_1400">
+<rect width="165" height="165" fill="currentColor"/>
+</clipPath>
+</defs>
+</symbol><symbol viewBox="0 0 12 7" fill="none" id="icon-down" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.5 0.500001L6 5.5L0.5 0.5" stroke="currentColor" stroke-linecap="round"/>
 </symbol><symbol viewBox="0 0 26 26" fill="none" id="icon-mark-circle" xmlns="http://www.w3.org/2000/svg">
 <path d="M25 13C25 19.6274 19.6274 25 13 25C6.37258 25 1 19.6274 1 13C1 6.37258 6.37258 1 13 1C14.8827 1 16.6642 1.43358 18.25 2.20635M22.75 5.5L12.25 16L9.25 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

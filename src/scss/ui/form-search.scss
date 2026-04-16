@@ -2,35 +2,158 @@
 @use "../base/media" as *;
 
 .form-search {
+  position: relative;
   display: flex;
   background-color: var(--gray);
   border-radius: 50px;
-  overflow: hidden;
   width: fit-content;
 
   &._open {
-    .form-search-input {
-      width: 300px;
-      padding-left: 15px;
+    .form-search__body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .form-search__toggle {
+      .close {
+        display: block;
+      }
+      .open {
+        display: none;
+      }
     }
   }
-}
-.form-search-toggle {
-  @include flex-center;
-  cursor: pointer;
-  border: none;
-  outline: none;
+  &__body {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    margin-top: 10px;
+    z-index: 10;
 
-  width: 40px;
-  height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
 
-  transition: color 0.3s ease;
-  @include hover {
-    color: var(--primary);
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
   }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    background-color: var(--gray);
+    border-radius: 50px;
+    box-shadow: 0 0 15px 0 rgba(8, 25, 88, 0.1);
+  }
+  &__input {
+    flex: 1;
+    border: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    outline: none;
+  }
+  &__submit {
+    @include flex-center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
 
-  svg {
-    width: 16px;
-    height: 16px;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--primary);
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__toggle {
+    @include flex-center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .close {
+      display: none;
+    }
+  }
+  &__res {
+    position: absolute;
+    top: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--gray);
+    left: 0;
+    right: 0;
+    margin-top: 5px;
+    box-shadow: 0 0 15px 0 rgba(8, 25, 88, 0.1);
+    height: 240px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+
+    transition:
+      transform 0.4s ease,
+      visibility 0.4s ease,
+      opacity 0.4s ease;
+
+    &._open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+  &__res-wrap {
+    max-height: 100%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--primary); /* Цвет бегунка */
+      border-radius: 3px;
+    }
+  }
+  &__res-item {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: rgba(46, 214, 161, 0.5);
+    }
   }
 }
