@@ -1,0 +1,63 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-rec {
+  background-color: var(--black);
+  color: white;
+  overflow: hidden;
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--black-l);
+    padding: 40px;
+    border-radius: 20px;
+    height: auto !important;
+
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: rgba(46, 214, 161, 0.1);
+
+      .btn-more svg {
+        transform: rotate(45deg);
+      }
+    }
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 25px;
+      width: 360px !important;
+      max-width: 100%;
+    }
+
+    .title {
+      margin-bottom: 15px;
+    }
+    .content {
+      opacity: 0.7;
+      margin: 0px 0px 15px 0px;
+    }
+    .btn-more {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: auto;
+
+      color: var(--primary);
+
+      svg {
+        width: 13px;
+        height: 13px;
+
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}

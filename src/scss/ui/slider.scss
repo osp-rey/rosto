@@ -54,10 +54,12 @@
     }
   }
 
-  &.swiper-button-lock,
   &.swiper-button-disabled {
     pointer-events: none;
     opacity: 0.5;
+  }
+  &.swiper-button-lock {
+    display: none;
   }
   &._transparent {
     --background: transparent;

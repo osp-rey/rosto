@@ -1,0 +1,93 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-get {
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    background-color: var(--black);
+    padding: 90px 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+
+    @include desktop {
+      gap: 40px;
+    }
+    @include desktop-middle {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+    @include laptop-middle {
+      padding: 40px 30px;
+    }
+    @include laptop-min {
+      flex-direction: column;
+      gap: 30px;
+    }
+    @include tablet {
+      padding: 30px 20px;
+      border-radius: 24px;
+    }
+  }
+  &__title {
+    flex: 0 1 600px;
+    @include desktop-middle {
+      flex: auto;
+      width: calc(50% - 20px);
+      order: 1;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    flex: 0 1 360px;
+    border-left: 1px dashed #3f4248;
+    border-right: 1px dashed #3f4248;
+
+    @include desktop {
+      padding: 0 40px;
+    }
+    @include desktop-middle {
+      flex: auto;
+      width: 100%;
+      padding: 0;
+      order: 3;
+      border: none;
+    }
+
+    .social-item {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__social-text {
+    margin-top: 20px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 1 540px;
+    @include desktop-middle {
+      flex: auto;
+      width: calc(50% - 20px);
+      order: 2;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+}

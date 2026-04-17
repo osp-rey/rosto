@@ -24,6 +24,17 @@
     background: rgba(255, 255, 255, 0.7);
     border: none;
   }
+  &._blur {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 0.7;
+    }
+  }
 }
 
 .check-wrapper {
@@ -34,6 +45,24 @@
       &::before {
         background-color: white;
         border-color: white;
+      }
+    }
+  }
+  &._white-p {
+    .wpcf7-list-item-label {
+      &::before {
+        background-color: white;
+        border-color: white;
+      }
+    }
+
+    input[type="checkbox"] {
+      &:checked + .wpcf7-list-item-label {
+        &::before {
+          background: url("@img/check-primary.svg") center / 13px auto no-repeat;
+          background-color: white;
+          border-color: white;
+        }
       }
     }
   }
@@ -85,5 +114,20 @@
         background-color 0.3s ease,
         border-color 0.3s ease;
     }
+  }
+}
+
+.form-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .btn-s {
+    width: 100%;
   }
 }

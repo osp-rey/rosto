@@ -1,7 +1,34 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
 .s-tariffs {
+  overflow: hidden;
+  padding-bottom: 30px;
+  @include laptop-min {
+    padding-bottom: 0;
+  }
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
+
+  &__slider {
+    @include desktop {
+      overflow: visible !important;
+    }
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto !important;
+
+      @include desktop {
+        width: 425px !important;
+        max-width: 100%;
+      }
+
+      .card-tariff {
+        height: 100%;
+      }
+    }
   }
 }

@@ -149,8 +149,67 @@ export default function sliders() {
         el: ".s-blog .slider-pagination",
         clickable: true,
       },
+    });
+  }
+
+  const tariffsSlider = document.querySelector(".s-tariffs__slider");
+
+  if (tariffsSlider) {
+    const swiper = new Swiper(tariffsSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        prevEl: ".s-tariffs .slider-arrow._prev",
+        nextEl: ".s-tariffs .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-tariffs .slider-pagination",
+        clickable: true,
+      },
       breakpoints: {
-        
+        1540: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const recSlider = document.querySelector(".s-rec__slider");
+
+  if (recSlider) {
+    const swiper = new Swiper(recSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5500,
+      },
+      navigation: {
+        prevEl: ".s-rec .slider-arrow._prev",
+        nextEl: ".s-rec .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-rec .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1540: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
       },
     });
   }

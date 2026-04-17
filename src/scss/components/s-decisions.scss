@@ -69,10 +69,25 @@
   &__gallery {
     position: relative;
     margin-top: 50px;
+    z-index: 1;
     @include laptop-middle {
       margin-top: 0;
       margin-bottom: 30px;
       order: 1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      border-radius: 30px;
+      box-shadow:
+        5px 11px 26px 0 rgba(0, 0, 0, 0.1),
+        19px 43px 47px 0 rgba(0, 0, 0, 0.09),
+        42px 97px 64px 0 rgba(0, 0, 0, 0.05),
+        74px 173px 75px 0 rgba(0, 0, 0, 0.01),
+        116px 271px 82px 0 rgba(0, 0, 0, 0);
+      z-index: -1;
     }
   }
   &__gallery-img {

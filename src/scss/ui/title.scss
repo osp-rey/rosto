@@ -60,7 +60,17 @@
     color: var(--primary);
   }
 }
-
+.tf-title {
+  font-family: "BebasNeue", sans-serif;
+  font-size: 32px;
+  margin: 0px;
+  @include laptop-min {
+    font-size: 28px;
+  }
+  @include tablet {
+    font-size: 26px;
+  }
+}
 .f-title {
   margin: 0;
   font-weight: 600;
