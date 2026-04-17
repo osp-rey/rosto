@@ -1,0 +1,60 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-why {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  z-index: 1;
+
+  &__decor {
+    position: absolute;
+    content: "";
+    right: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: -1;
+    @include tablet {
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 500px;
+      max-width: none;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    row-gap: 30px;
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  &__item {
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px 0 rgba(8, 25, 88, 0.1);
+    background: rgba(33, 36, 42, 0.8);
+
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 25px;
+      border-radius: 16px;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+    .content {
+      margin: 0;
+    }
+  }
+}

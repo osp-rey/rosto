@@ -2,6 +2,18 @@
 @use "../base/media" as *;
 
 .s-faq {
+  position: relative;
+  z-index: 1;
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: -70px;
+    pointer-events: none;
+    z-index: -1;
+    @include tablet-min {
+      top: 0;
+    }
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

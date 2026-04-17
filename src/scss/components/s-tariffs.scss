@@ -14,6 +14,10 @@
   }
 
   &__slider {
+    @media (min-width: 1681px) {
+      padding: 30px !important;
+      margin: -30px !important;
+    }
     @include desktop {
       overflow: visible !important;
     }

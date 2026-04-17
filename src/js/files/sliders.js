@@ -213,4 +213,66 @@ export default function sliders() {
       },
     });
   }
+
+  const gallerySlider = document.querySelector(".s-gallery__slider");
+
+  if (gallerySlider) {
+    const swiper = new Swiper(gallerySlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5500,
+      },
+      navigation: {
+        prevEl: ".s-gallery .slider-arrow._prev",
+        nextEl: ".s-gallery .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-gallery .slider-pagination",
+        clickable: true,
+      },
+    });
+  }
+
+  const previewSlider = document.querySelector(".s-preview__slider");
+
+  if (previewSlider) {
+    const wrap = document.querySelector(".s-preview__slider-wrapper");
+
+    const swiper = new Swiper(previewSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      // autoplay: {
+      //   delay: 5000,
+      // },
+      navigation: {
+        prevEl: ".s-preview .slider-arrow._prev",
+        nextEl: ".s-preview .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-preview .slider-pagination",
+        clickable: true,
+      },
+      on: {
+        init: () => {
+          handlerHeight()
+        }
+      }
+    });
+
+    function handlerHeight() {
+      const bigImg = previewSlider.querySelector(
+        ".swiper-slide-active",
+      ).nextElementSibling;
+      const bigHeight = bigImg.clientHeight;
+
+      console.log(previewSlider.clientHeight)
+
+      // wrap.style.height = bigHeight + "px";
+    }
+
+    // handlerHeight();
+  }
 }

@@ -4,7 +4,7 @@
 .s-hero {
   position: relative;
   display: flex;
-  align-items: center;
+  // align-items: center;
   padding-top: 155px;
   color: white;
   min-height: 800px;
@@ -26,6 +26,12 @@
   }
   @include tablet {
     border-radius: 0px 0px 20px 20px;
+  }
+  .breadcrumbs {
+    margin-bottom: 20px;
+    .container {
+      padding: 0;
+    }
   }
   &__decor {
     position: absolute;
@@ -133,8 +139,6 @@
     line-height: 150%;
     @include laptop-min {
       font-size: 16px;
-    }
-    @include tablet {
       max-width: 550px;
     }
   }
@@ -267,6 +271,21 @@
         height: 6px;
         background-color: var(--primary);
       }
+    }
+  }
+  &__player {
+    max-width: 790px;
+    width: 100%;
+    margin-left: auto;
+    @include desktop-middle {
+      max-width: 700px;
+    }
+    @include laptop {
+      max-width: 550px;
+    }
+    @include laptop-min {
+      max-width: 750px;
+      margin: 0 auto;
     }
   }
 }
