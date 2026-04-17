@@ -48,7 +48,7 @@
   &__inside {
     @include flex-between;
     gap: 30px;
-    @include tablet {
+    @include laptop-min {
       flex-wrap: wrap;
     }
   }
@@ -80,7 +80,7 @@
     &.swiper-slide-active {
       opacity: 1 !important;
     }
-    @include tablet {
+    @include laptop-min {
       flex-wrap: wrap;
       gap: 30px;
     }
@@ -94,9 +94,6 @@
       max-width: 490px;
     }
     @include laptop-min {
-      max-width: 385px;
-    }
-    @include tablet {
       max-width: none;
       width: 100%;
     }

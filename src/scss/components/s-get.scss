@@ -90,4 +90,10 @@
       width: 100%;
     }
   }
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    z-index: -1;
+  }
 }
