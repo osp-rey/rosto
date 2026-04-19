@@ -238,15 +238,13 @@ export default function sliders() {
   const previewSlider = document.querySelector(".s-preview__slider");
 
   if (previewSlider) {
-    const wrap = document.querySelector(".s-preview__slider-wrapper");
-
     const swiper = new Swiper(previewSlider, {
       speed: 900,
       slidesPerView: "auto",
       spaceBetween: 20,
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         prevEl: ".s-preview .slider-arrow._prev",
         nextEl: ".s-preview .slider-arrow._next",
@@ -255,24 +253,51 @@ export default function sliders() {
         el: ".s-preview .slider-pagination",
         clickable: true,
       },
-      on: {
-        init: () => {
-          handlerHeight()
-        }
-      }
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
     });
+  }
 
-    function handlerHeight() {
-      const bigImg = previewSlider.querySelector(
-        ".swiper-slide-active",
-      ).nextElementSibling;
-      const bigHeight = bigImg.clientHeight;
+  const teamSlider = document.querySelector(".s-team__slider");
 
-      console.log(previewSlider.clientHeight)
-
-      // wrap.style.height = bigHeight + "px";
-    }
-
-    // handlerHeight();
+  if (teamSlider) {
+    const swiper = new Swiper(teamSlider, {
+      speed: 900,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 5500,
+      },
+      navigation: {
+        prevEl: ".s-team .slider-arrow._prev",
+        nextEl: ".s-team .slider-arrow._next",
+      },
+      scrollbar: {
+        el: ".s-team .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        1365: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
   }
 }

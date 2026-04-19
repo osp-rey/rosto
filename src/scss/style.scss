@@ -24,6 +24,7 @@
 @use "./ui/card-article";
 @use "./ui/card-service";
 @use "./ui/card-tariff";
+@use "./ui/card-team";
 @use "./ui/video-player";
 @use "./ui/breadcrumbs";
 
@@ -54,5 +55,9 @@
 @use "./components/s-gallery";
 @use "./components/s-why";
 @use "./components/s-preview";
+@use "./components/s-team";
+@use "./components/s-archive-tariff";
+@use "./components/s-comparison";
+@use "./components/s-spollers";
 
 @use "./components/footer";

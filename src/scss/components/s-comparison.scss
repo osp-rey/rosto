@@ -1,0 +1,116 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-comparison {
+  overflow: hidden;
+  &__table {
+    overflow-x: auto;
+    padding: 30px 0px;
+
+    &._pressed {
+      user-select: none;
+    }
+
+    &::-webkit-scrollbar {
+      height: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Цвет дорожки */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--primary); /* Цвет бегунка */
+      border-radius: 6px;
+    }
+    .inside {
+      width: fit-content;
+      margin: 0 auto;
+    }
+    .head {
+      position: sticky;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 25px 35px;
+      box-shadow: 0 0 30px 0 rgba(8, 25, 88, 0.1);
+      background: linear-gradient(180deg, #f4f5f7 0%, #fff 100%);
+      margin-bottom: 30px;
+      @include laptop {
+        padding: 20px;
+      }
+      @include tablet {
+        padding: 15px 10px;
+      }
+    }
+    .row {
+      display: flex;
+      gap: 20px;
+      @include tablet {
+        gap: 15px;
+      }
+    }
+    .item {
+      flex: 1 0 250px;
+      text-align: center;
+      @include laptop {
+        flex-basis: 200px;
+      }
+      @include laptop-min {
+        flex-basis: 160px;
+      }
+      @include tablet {
+        flex-basis: 150px;
+      }
+      &:first-child {
+        flex-basis: 600px;
+        text-align: start;
+        @include laptop {
+          flex-basis: 400px;
+        }
+        @include tablet {
+          flex-basis: 230px;
+        }
+      }
+    }
+    .block {
+      width: fit-content;
+      padding: 0px 35px;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+
+      @include laptop {
+        padding: 0 20px;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+      @include tablet {
+        padding: 0 10px;
+      }
+    }
+    .title {
+      margin-bottom: 10px;
+      @include tablet {
+        width: 240px;
+        max-width: 100%;
+        font-size: 20px;
+      }
+    }
+    .block-item {
+      padding: 20px 0px;
+
+      border-bottom: 1px solid var(--gray-l);
+      @include tablet {
+        padding: 15px 0px;
+      }
+    }
+    .icon-check {
+      display: block;
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-archive-tariff {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
