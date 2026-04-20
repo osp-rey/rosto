@@ -1,0 +1,44 @@
+<aside>
+	<div class="modal" id="modal-feedback">
+		<div class="modal__body">
+			<div class="modal__close" data-fancybox-close>
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</div>
+			<div class="modal__title t-title">Связаться с нами</div>
+			<p class="modal__content">Оставьте заявку и мы свяжемся с Вами</p>
+			<form action="#" class="modal__form">
+				<div style="display: none">
+					<input type="text" id="input-modal-feedback" />
+				</div>
+				<div class="input-control">
+					<input type="text" placeholder="Имя" class="input" />
+				</div>
+				<div class="input-control">
+					<input type="tel" placeholder="Номер телефона" class="input" />
+				</div>
+				<div class="check-wrapper">
+					<span class="wpcf7-form-control-wrap" data-name="acceptance-84">
+						<span class="wpcf7-form-control wpcf7-acceptance">
+							<span class="wpcf7-list-item">
+								<label>
+									<input type="checkbox" name="acceptance-84" value="1" required aria-invalid="false" />
+									<span class="wpcf7-list-item-label">
+										<span>
+											Я соглашаюсь с 
+											<a href="/personal-data" target="_blank">
+												Правилами обработки персональных данных
+											</a>
+										</span>
+									</span>
+								</label>
+							</span>
+						</span>
+					</span>
+				</div>
+				<button type="submit" class="btn-s">Оставить заявку</button>
+			</form>
+		</div>
+	</div>
+</aside>
