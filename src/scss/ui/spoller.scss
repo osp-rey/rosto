@@ -1,0 +1,66 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.spoller {
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px 0 rgba(8, 25, 88, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+
+  @include tablet {
+    border-radius: 16px;
+  }
+}
+.spoller-btn {
+  @include flex-between;
+  padding: 50px;
+  cursor: pointer;
+  gap: 20px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+
+  transition: padding .3s ease;
+
+  @include laptop-middle {
+    padding: 40px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+    padding: 25px;
+  }
+
+  &._spoller-active {
+    padding-bottom: 30px;
+    @include laptop-min {
+      padding-bottom: 20px;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: var(--primary);
+
+    transition: transform 0.3s ease;
+  }
+
+  .content {
+    margin: 0;
+  }
+}
+.spoller-body {
+  padding: 0px 50px 50px 50px;
+  @include laptop-middle {
+    padding: 0px 40px 40px 40px;
+  }
+  @include tablet {
+    padding: 0px 25px 25px 25px;
+  }
+}

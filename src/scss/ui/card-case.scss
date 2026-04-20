@@ -44,8 +44,8 @@
     margin-top: 25px;
     z-index: 1;
     @include tablet {
-      width: 360px;
-      max-width: 100%;
+      max-width: 360px;
+      width: 100%;
     }
     @include tablet-min {
       margin: 25px auto 0px auto;

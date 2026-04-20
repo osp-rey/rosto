@@ -27,6 +27,8 @@
 @use "./ui/card-team";
 @use "./ui/video-player";
 @use "./ui/breadcrumbs";
+@use "./ui/spoller";
+@use "./ui/select";
 
 // components
 @use "./components/header";
@@ -59,5 +61,8 @@
 @use "./components/s-archive-tariff";
 @use "./components/s-comparison";
 @use "./components/s-spollers";
+@use "./components/s-archive-blog";
+@use "./components/s-archive-case";
+@use "./components/s-jobs";
 
 @use "./components/footer";

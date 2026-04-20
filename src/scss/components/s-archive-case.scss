@@ -1,0 +1,13 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-archive-case {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @include laptop-middle {
+      grid-template-columns: 1fr;
+    }
+  }
+}

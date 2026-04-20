@@ -10,6 +10,7 @@ import inputmask from "./files/inputmask.js";
 import map from "./files/maps.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import scrollable from "./files/scrollable.js";
+import selectHandler from "./files/select.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import tab from "./files/tab.js";
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mediaAdaptive();
   decisionsGallery();
   scrollable();
+  selectHandler();
 
   Fancybox.bind("[data-fancybox]", { closeButton: false });
   // Fancybox.show([{ src: "#modal-feedback", type: "inline" }], {

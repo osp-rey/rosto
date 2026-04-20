@@ -1,0 +1,63 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-spollers {
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  &__item {
+  }
+  &__item-table {
+    .head {
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--gray-l);
+      margin-bottom: 16px;
+      font-weight: 600;
+      @include tablet {
+        display: none;
+      }
+    }
+    .row {
+      display: flex;
+      gap: 30px;
+      @include laptop-min {
+        gap: 20px;
+      }
+      @include tablet {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+        @include tablet {
+          padding-bottom: 15px;
+          border-bottom: 1px solid var(--gray-l);
+        }
+      }
+    }
+    .cell {
+      flex: 1 1 25%;
+      &:first-child {
+        flex-basis: 50%;
+      }
+      @include tablet {
+        flex: auto;
+        width: 100%;
+      }
+
+      .name {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+    .table-body {
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.select {
+  position: relative;
+
+  &._open {
+    .select-btn .arrow {
+      transform: rotate(180deg);
+    }
+    .select-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  .arrow {
+    position: absolute;
+    right: 30px;
+    display: block;
+    width: 12px;
+    height: 6px;
+    z-index: 1;
+
+    transition: transform 0.3s ease;
+  }
+}
+
+.select-input {
+  padding-right: 60px;
+  pointer-events: none;
+}
+
+.select-body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px 0 rgba(8, 25, 88, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  height: 180px;
+  overflow: hidden;
+  color: var(--black);
+  z-index: 10;
+
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+
+  transition:
+    transform 0.4s ease,
+    visibility 0.4s ease,
+    opacity 0.4s ease;
+}
+.select-body-wrap {
+  max-height: 100%;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Цвет дорожки */
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary); /* Цвет бегунка */
+    border-radius: 6px;
+  }
+}
+
+.select-item {
+  cursor: pointer;
+  padding: 12px;
+  user-select: none;
+
+  transition: background-color 0.3s ease;
+  @include hover {
+    background-color: var(--primary);
+  }
+}

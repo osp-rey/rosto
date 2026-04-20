@@ -176,3 +176,16 @@
     height: 20px;
   }
 }
+
+.btn-more {
+  width: 400px;
+  max-width: 100%;
+  margin: 40px auto 0px auto;
+
+  @include laptop-min {
+    margin-top: 30px;
+  }
+  @include tablet-min {
+    width: 100%;
+  }
+}

@@ -120,64 +120,7 @@
       width: 100%;
     }
   }
-  &__item {
-    border-radius: 20px;
-    padding: 25px 25px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px 0 rgba(8, 25, 88, 0.1);
-    background: rgba(255, 255, 255, 0.5);
-
-    @include laptop {
-      padding: 20px 15px;
-    }
-    @include tablet {
-      padding: 15px 10px;
-      border-radius: 16px;
-    }
-
-    .btn {
-      @include flex-between;
-      gap: 20px;
-      padding: 20px;
-      cursor: pointer;
-
-      user-select: none;
-      font-family: "BebasNeue", sans-serif;
-      font-size: 32px;
-
-      @include laptop {
-        font-size: 28px;
-        padding: 15px;
-      }
-      @include tablet {
-        font-size: 24px;
-        padding: 10px;
-      }
-
-      &._spoller-active {
-        svg {
-          transform: rotate(180deg);
-        }
-      }
-
-      svg {
-        width: 15px;
-        height: 15px;
-        color: var(--primary);
-        flex-shrink: 0;
-
-        transition: transform 0.3s ease;
-      }
-    }
-    .inside {
-      padding: 10px 20px 20px 20px;
-      @include laptop {
-        padding: 0px 15px 15px 15px;
-      }
-      @include tablet {
-        padding: 0px 10px 10px 10px;
-      }
-    }
+  &__spoller {
     .content {
       margin: 0;
     }
