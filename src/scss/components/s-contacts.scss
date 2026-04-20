@@ -53,6 +53,11 @@
         flex-direction: column;
       }
     }
+
+    &:nth-child(2) {
+      background: url('@img/follow-bg-blue.png') right -75px bottom -115px / 445px auto no-repeat;
+      background-color: white;
+    }
   }
   &__item-row {
     .title {

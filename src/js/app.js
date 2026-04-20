@@ -3,6 +3,7 @@ import burger from "./files/burger.js";
 import burgerAddList from "./files/burgerAddList.js";
 import buttonsNote from "./files/buttonsNote.js";
 import cardCaseMore from "./files/cardCaseMore.js";
+import copy from "./files/copy.js";
 import decisionsGallery from "./files/decisionsGallery.js";
 import formSearch from "./files/formSearch.js";
 import headerScroll from "./files/headerScroll.js";
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   decisionsGallery();
   scrollable();
   selectHandler();
+  copy();
 
   Fancybox.bind("[data-fancybox]", { closeButton: false });
   // Fancybox.show([{ src: "#modal-feedback", type: "inline" }], {

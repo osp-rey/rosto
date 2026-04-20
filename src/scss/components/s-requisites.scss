@@ -1,0 +1,76 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-requisites {
+  &__wrap {
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #e9e9e9;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include hover {
+      .copy-btn {
+        opacity: 1;
+      }
+    }
+
+    .name {
+      color: var(--gray-d);
+    }
+    .inside {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .copy-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      color: var(--primary);
+      gap: 10px;
+
+      opacity: 0;
+
+      transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+
+      @include hover {
+        color: var(--primary-hover);
+      }
+      @include laptop-min {
+        opacity: 1;
+      }
+      @include tablet {
+        span {
+          display: none;
+        }
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+
+        @include tablet {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  &__copy-all {
+    margin: 30px auto 0px auto;
+
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}
